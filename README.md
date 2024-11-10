@@ -8,22 +8,22 @@ Use this gif as an example of how the app should work.
 
 ## Instructions
 
-Welcome to Plantsy! You've been tasked with building out some features for the
-admin side of a plant store. The designers have put together the components and
-CSS. Now it's up to you to bring the features to life by adding stateful logic
-as well as persisting data to the backend via our API.
+Welcome to Plantsy, a web app for managing a plant store's inventory. In this challenge, you're tasked with implementing various features on the admin side of the plant store. You'll be working with a backend API and managing stateful logic using React (or your preferred state management system).
 
-Your job will be to make our app work according to the user stories you will
-find the [Core Deliverables](#Core-Deliverables) section.
+The frontend components and CSS are already provided. Your job is to add the necessary functionality to handle user interactions, API requests, and dynamic state updates.
 
 ## Setup
 
-1. Run `npm install` in your terminal.
-2. Run `npm run server`. This will run your backend on port `6001`.
-3. In a new terminal, run `npm start`.
+To get started with the project, follow these steps:
 
-Make sure to open [http://localhost:6001/plants](http://localhost:6001/plants)
-in the browser to verify that your backend is working before you proceed!
+Install dependencies:
+npm install
+npm run server
+This will run the backend on port 6001. Ensure it's working before proceeding by opening http://localhost:6001/plants in your browser.
+
+Start the frontend app:
+npm start
+This will launch the React app in your browser.
 
 ## Endpoints
 
@@ -147,4 +147,22 @@ Example Response:
 
 ```json
 {}
-```
+
+When the app starts:
+The app should make a GET request to /plants and render the list of plants.
+Each plant should display its name, image, and price.
+You should allow marking a plant as sold out, which could be toggled by clicking a "sold out" button.
+The user should be able to search for plants by name, which filters the list of plants displayed.
+Adding a Plant:
+A form should be provided for adding a new plant. The form should take the plant’s name, image URL, and price.
+When the user submits the form, a POST request should be made to the /plants endpoint with the plant data.
+The newly added plant should be added to the list dynamically without reloading the page.
+Marking a Plant as Sold Out:
+There should be a button next to each plant to toggle its "sold out" status.
+When clicked, the button should toggle between "Sold Out" and "Available", and the plant should be visually updated (e.g., grayed out or crossed out).
+The sold-out status should be stored in the backend.
+Search Functionality:
+A search bar should be provided to allow users to filter plants by name.
+The list of plants should be dynamically updated as the user types.
+You should handle edge cases like empty searches, no results found, etc.
+

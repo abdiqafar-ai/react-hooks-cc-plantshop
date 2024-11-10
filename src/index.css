@@ -107,6 +107,9 @@ input:focus {
 
 .card img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
+
 }
 
 .card button {
@@ -122,6 +125,12 @@ input:focus {
   .card {
     width: calc(33% - 2rem);
   }
+}
+
+.out-of-stock {
+  background-color: #f1c1c1; 
+  color: #a10000;            
+  cursor: not-allowed;
 }
 
 @media (min-width: 1024px) {
